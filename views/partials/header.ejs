@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title> Mooch </title>
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <!-- add jQuery CDN -->
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <!-- add Semantic UI CDN -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+            <!-- add our own stylesheet -->
+            <link rel="stylesheet" type="text/css" href="/webfrontend.css">
+            <!-- add our own javascript -->
+            <script type="text/javascript" src="/js/script.js"></script>
+
+    </head>
+
+    <body>
+        <div class="ui top fixed menu">
+            <div class="ui container">
+                <a href="/" class="item"><img src="mustache.png"></a>
+                <div class="right menu">
+                    <% if(!currentUser){ %>
+                        <a href="/login" class="item">Login</a>
+                    <% } else { %>
+                        <a href="/update/<%= currentUser.postofuser._id %>" class="item"> Update <%= currentUser.username %></a>
+                        <a href="/logout" class="item">Logout</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div id="nick2">
+
+            <div class= "container">
+                <% if(error && error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <h4><%= error %></h4>
+                    </div>
+                <% } %>
+
+                <% if(success && success.length > 0){ %>
+                <div class="alert alert-success" role="alert">
+                    <h4><%= success %></h4>
+                </div>
+                <% } %>
+
+            </div>

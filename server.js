@@ -254,7 +254,7 @@ app.get('/api/read', (req,res) => {
 
 
 // DESTROY Route
-//app.delete("/boats/:id", middleware.isLoggedIn, function(req,res){
+//app.delete("/company/:id", middleware.isLoggedIn, function(req,res){
 //    //destroy post
 //    Post.findByIdAndRemove(req.params.id, function(err){
 //       if(err){

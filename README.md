@@ -7,9 +7,9 @@ With this code, you will have a functioning web server with open routes to creat
 as well as functioning user authentication and error/success middleware delivered through flash. The original
 purpose for this code (and the way it is currently set up) was to have the website act as an API to the database which allowed for:
 
-    - companies UPDATE their data
+    - companies to UPDATE their data
     - me to CREATE/DELETE a companies data as needed
-    - end users READ data via a mobile app
+    - end users to READ data via a mobile app
 
 As such, the website itself has a "secret" route (a route not linked to on any of the website's other
 webpages) for me to CREATE/DELETE companies. Note: If this is not desired, you
@@ -27,11 +27,9 @@ As for database schemas, there are two: Company and Post. The Company schema has
 a 1-to-1 object reference to an associate post for that company. The Post schema has the company's city,
 location, thumbnail image, and url, and the 1-to-1 object reference to the associated company for that post.
 
-I've included explanatory comments before most chunks of code.
 
 
-
-To run, you will need to have Node JS (https://nodejs.org/en/download/)
+**To run**, you will need to have Node JS (https://nodejs.org/en/download/)
 and MongoDB installed (https://www.mongodb.com/download-center/community).
 Installing MongoDB is optional here and there is hard-coded data in
 server.js that is commented out and can be uncommented in place of a database.
@@ -43,6 +41,7 @@ npm install
 This will install express and all other node dependencies listed in package.json.
 
 
+I've included explanatory comments before most chunks of code.
 
 Good luck and happy coding. Below I've included more about the routes.
 

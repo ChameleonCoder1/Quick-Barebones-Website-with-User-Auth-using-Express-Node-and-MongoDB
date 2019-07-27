@@ -15,6 +15,12 @@
         <input class="ui blue big basic button" type="submit">
     </form>
 
+    <!-- Delete this post -->
+    <% if(currentCompany){ %>
+        <form id="style1" action="/company/<%= currentCompany.postofcompany._id %>?_method=DELETE" method="POST">
+            <button class="ui red basic button">Delete</button>
+        </form>
+    <% } %>
 
 
 </div>

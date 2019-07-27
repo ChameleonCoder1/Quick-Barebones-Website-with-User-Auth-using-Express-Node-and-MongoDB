@@ -221,23 +221,17 @@ app.get('/api/read', (req,res) => {
     //Update route:
     app.put("/update/:id", middleware.isLoggedIn, function(req,res){
         req.body.city=req.sanitize(req.body.city);
-        req.body.restaurant_name=req.sanitize(req.body.restaurant_name);
+        req.body.company_name=req.sanitize(req.body.company_name);
         req.body.location=req.sanitize(req.body.location);
         req.body.thumbnail_image=req.sanitize(req.body.thumbnail_image);
         req.body.url=req.sanitize(req.body.url);
-        req.body.sunday_drink=req.sanitize(req.body.sunday_drink);
-        req.body.sunday_food=req.sanitize(req.body.sunday_food);
-        req.body.sunday_event=req.sanitize(req.body.sunday_event);
 
         var newPost = {
             city: req.body.city,
-            restaurant_name: req.body.restaurant_name,
+            company_name: req.body.company_name,
             location: req.body.location,
             thumbnail_image: req.body.thumbnail_image,
-            url: req.body.url,
-            sunday_drink: req.body.sunday_drink,
-            sunday_food: req.body.sunday_food,
-            sunday_event: req.body.sunday_event
+            url: req.body.url
         };
 
         Post.findByIdAndUpdate(req.params.id, newPost , function(err, updatedPost){
@@ -254,16 +248,17 @@ app.get('/api/read', (req,res) => {
 
 
 // DESTROY Route
-//app.delete("/company/:id", middleware.isLoggedIn, function(req,res){
-//    //destroy post
-//    Post.findByIdAndRemove(req.params.id, function(err){
-//       if(err){
-//           res.redirect("/boats/" + req.params.id);
-//       } else {
-//           res.redirect("/boats");
-//       }
-//    });
-//});
+app.delete("/company/:id", middleware.isLoggedIn, function(req,res){
+    Post.findByIdAndRemove(req.params.id, function(err){
+       if(err){
+           req.flash("error", "Delete unsuccessful.");
+           res.redirect("/add/company/new");
+       } else {
+           req.flash("success", "Delete successful.");
+           res.redirect("/add/company/new");
+       }
+    });
+});
 
 
 

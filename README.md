@@ -76,6 +76,7 @@ DELETE Route:
 
 
 Login Route
+
     - get request to: /login
         - renders login.ejs, the form to login for a company
     - post request to: /login

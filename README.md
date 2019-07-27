@@ -7,9 +7,9 @@ With this code, you will have a functioning web server with open routes to creat
 as well as functioning user authentication and error/success middleware delivered through flash. The original
 purpose for this code (and the way it is currently set up) was to have the website act as an API to the database which allowed for:
 
-    * companies UPDATE their data
-    * me to CREATE/DELETE a companies data as needed
-    * end users READ data via a mobile app
+    - companies UPDATE their data
+    - me to CREATE/DELETE a companies data as needed
+    - end users READ data via a mobile app
 
 As such, the website itself has a "secret" route (a route not linked to on any of the website's other
 webpages) for me to CREATE/DELETE companies. Note: If this is not desired, you
@@ -50,33 +50,33 @@ Good luck and happy coding. Below I've included more about the routes.
 
 READ Route:
 
-    * get request to: /api/read
+    - get request to: /api/read
 
 
 CREATE Route:
 
-    * get request to: /add/company/new
-        * renders new.ejs, the form to create a new user
-    * post request to: /add/company/new
-        * creates new company and associates empty post data with that company
+    - get request to: /add/company/new
+        - renders new.ejs, the form to create a new user
+    - post request to: /add/company/new
+        - creates new company and associates empty post data with that company
 
 UPDATE Route:
 
-    * get request to: /update/:id (company id)
-        * renders edit.ejs which shows a logged-in company their information and give them ability to update
-    * post request to: /update/:id (company id)
-        * updates any data that the company changed via edit.ejs
+    - get request to: /update/:id (company id)
+        - renders edit.ejs which shows a logged-in company their information and give them ability to update
+    - post request to: /update/:id (company id)
+        - updates any data that the company changed via edit.ejs
 
 DELETE Route:
-    * delete request to: /company/:id
+    - delete request to: /company/:id
 
 
 
 
 Login Route
-    * get request to: /login
-        * renders login.ejs, the form to login for a company
-    * post request to: /login
-        * logs a company in and redirects to home page
-    * get request to: /logout
-        * logs a company out and redirects to home page
+    - get request to: /login
+        - renders login.ejs, the form to login for a company
+    - post request to: /login
+        - logs a company in and redirects to home page
+    - get request to: /logout
+        - logs a company out and redirects to home page

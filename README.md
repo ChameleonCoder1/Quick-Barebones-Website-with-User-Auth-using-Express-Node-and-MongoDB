@@ -29,7 +29,9 @@ location, thumbnail image, and url, and the 1-to-1 object reference to the assoc
 
 
 
-**To run**, you will need to have Node JS (https://nodejs.org/en/download/)
+**To run:**
+
+You will need to have Node JS (https://nodejs.org/en/download/)
 and MongoDB installed (https://www.mongodb.com/download-center/community).
 Installing MongoDB is optional here and there is hard-coded data in
 server.js that is commented out and can be uncommented in place of a database.

@@ -68,6 +68,7 @@ UPDATE Route:
         - updates any data that the company changed via edit.ejs
 
 DELETE Route:
+
     - delete request to: /company/:id
         - deletes a company. available from new.ejs (/add/company/new) when logged in as that company
 

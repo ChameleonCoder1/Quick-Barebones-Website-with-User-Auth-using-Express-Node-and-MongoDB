@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title> Mooch </title>
+            <title> A Quick Website </title>
             <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <!-- add jQuery CDN -->
@@ -20,16 +20,16 @@
             <div class="ui container">
                 <a href="/" class="item"><img src="mustache.png"></a>
                 <div class="right menu">
-                    <% if(!currentUser){ %>
+                    <% if(!currentCompany){ %>
                         <a href="/login" class="item">Login</a>
                     <% } else { %>
-                        <a href="/update/<%= currentUser.postofuser._id %>" class="item"> Update <%= currentUser.username %></a>
+                        <a href="/update/<%= currentCompany.postofcompany._id %>" class="item"> Update <%= currentCompany.username %></a>
                         <a href="/logout" class="item">Logout</a>
                     <% } %>
                 </div>
             </div>
         </div>
-        <div id="nick2">
+        <div id="style2">
 
             <div class= "container">
                 <% if(error && error.length > 0){ %>

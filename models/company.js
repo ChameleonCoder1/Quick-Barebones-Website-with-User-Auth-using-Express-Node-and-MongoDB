@@ -1,10 +1,10 @@
 var mongoose                = require("mongoose");
 var passportLocalMongoose   = require("passport-local-mongoose");
 
-var userSchema = new mongoose.Schema({
+var companySchema = new mongoose.Schema({
     username: String,
     password: String,
-    postofuser:
+    postofcompany:
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Post"
@@ -15,7 +15,7 @@ var userSchema = new mongoose.Schema({
 
 //allows us to use the following on User object:
 //  .authenticate(), .register(), .setPassword(), .serialize(), .deserialize()
-userSchema.plugin(passportLocalMongoose);
+companySchema.plugin(passportLocalMongoose);
 
 //Compile the Schema that we just defined into a model (takes the Schema pattern and allows
 //methods to be run on it), and save it/export it to a variable called User.
@@ -23,4 +23,4 @@ userSchema.plugin(passportLocalMongoose);
 //the variable User. Note: the .model() function will pluralize the name we give it
 //when it creates a database...so this database will actually be called Users.
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Company", companySchema);

@@ -41,8 +41,7 @@ folder in your command line and run:
 
 npm install
 
-The command "npm install" will install express and all other node dependencies listed in package.json.
-
+The command “npm install” will install Express (web development framework) and all other node dependencies listed in package.json. Npm is the Node Package Manager, which handles installation of node packages.
 
 I've included explanatory comments before most chunks of code.
 

@@ -22,7 +22,9 @@
                 <div class="right menu">
                     <% if(!currentCompany){ %>
                         <a href="/login" class="item">Login</a>
+                        <a href="/show" class="item">Show Posts</a>
                     <% } else { %>
+                        <a href="/show" class="item">Show Posts</a>
                         <a href="/update/<%= currentCompany.postofcompany._id %>" class="item"> Update <%= currentCompany.username %></a>
                         <a href="/logout" class="item">Logout</a>
                     <% } %>

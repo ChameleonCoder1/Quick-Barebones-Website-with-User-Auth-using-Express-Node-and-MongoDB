@@ -1,48 +1,52 @@
+<!-- NOTE: This code does not get used by any routes but is here for reference if you are interested
+in making a page to show data from the database on the website instead of showing data on an external
+application (like a mobile app) via an API call from that external application. The route for this is in server.js
+ -->
+
 <% include partials/header.ejs %>
-    <div class="ui grid">
-        <div class="sixteen wide column">
-            <h2 class="ui huge center aligned header">
-                <img class="ui image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Community_boat_logo.svg/2000px-Community_boat_logo.svg.png">
-                <div class="content">
-                Ahoy
-                </div>
-            </h2>
-            <h5 class="ui center aligned header">
-            <a class="ui floated basic blue button" href="/boats/new">Post Boat<i class="right chevron icon"></i></a>
-            </h5>
-        </div>
+<div class="ui grid">
+    <div class="sixteen wide column">
+        <h2 class="ui huge center aligned header">
+            <img class="ui image" src="https://opengameart.org/sites/default/files/styles/medium/public/compass%20rose.png">
+            <div class="content">
+            A Quick Website
+            </div>
+        </h2>
     </div>
-    <div class="two column stackable ui grid">
-                <% allposts.forEach(function(thispost){ %>
-                <div class="column">
-                <div class="ui top attached segment">
-                <div class="ui divided items">
-                    <div class="item">
-                        <div class="image">
-                            <img src="<%= thispost.image %>" >
+</div>
+<div class="two column stackable ui grid">
+            <% allposts.forEach(function(thispost){ %>
+            <div class="column">
+            <div class="ui top attached segment">
+            <div class="ui divided items">
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= thispost.thumbnail_image %>" >
+                    </div>
+                    <div class="content">
+                        <!-- Add an anchor tag that points to /boats/post._id (SHOW Route) -->
+                        <a class="header" href="/company/<%= thispost._id %>"><%= thispost.company_name %></a>
+                        <div class="meta">
+                            <span>City: <%= thispost.city %></span>
+                            <span>Address: <%= thispost.location %></span>
                         </div>
-                        <div class="content">
-                            <!-- Add an anchor tag that points to /boats/post._id (SHOW Route) -->
-                            <a class="header" href="/boats/<%= thispost._id %>"><%= thispost.name %></a>
-                            <div class="meta">
-                                <span>Posted: <%= thispost.created.toDateString() %></span>
-                            </div>
-                            <div class="description">
-                                <p><%- thispost.blurb.substring(0,100) %>...</p>
-                            </div>
-                            <div class="extra">
-                                <!-- Add an anchor tag that points to /boats/post._id (SHOW Route) -->
-                                <a class="ui floated basic blue button" href="/boats/<%= thispost._id %>">
-                                    Read More
-                                    <i class="right chevron icon"></i>
-                                </a>
-                            </div>
+                        <div class="description">
+                            <p><%= thispost.url.substring(0,100) %>...</p>
+                        </div>
+                        <div class="extra">
+                            <!-- Add an anchor tag that points to /company/show/post._id (SHOW Route) -->
+                            <!--
+                            <a class="ui floated basic blue button" href="/company/show/reference_the_company_post_id_here">
+                                Read More
+                                <i class="right chevron icon"></i>
+                            </a>-->
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
-                <% })%>
-                </div>
+            </div>
+            </div>
+            </div>
+            <% })%>
     </div>
+
 <% include partials/footer.ejs %>

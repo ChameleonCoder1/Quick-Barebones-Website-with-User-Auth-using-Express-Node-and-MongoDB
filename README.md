@@ -5,11 +5,11 @@ This is code that I use to get started on web development projects.
 
 With this code, you will have a functioning web server with open routes to create/read/update/delete users
 as well as functioning user authentication and error/success middleware delivered through flash. The original
-purpose for this code (and the way it is currently set up) was to have the website act as an API to the database which allowed for:
+purpose for this code (and the way it is currently set up) was to have various ways to access to the database (via website or react native application):
 
-    - companies to UPDATE their data
-    - me to CREATE/DELETE a companies data as needed
-    - end users to READ data via a mobile app
+    - companies can UPDATE their data (via website)
+    - only I can CREATE/DELETE a companies data as needed (via a "secret" route on website)
+    - end users can READ data (via API call which returns JSON data)
 
 As such, the website itself has a "secret" route (a route not linked to on any of the website's other
 webpages) for me to CREATE/DELETE companies. Note: If this is not desired, you
@@ -17,7 +17,7 @@ can easily link to the create route (get request to /add/company/new) on any web
 
 It has "non-secret" routes for company log-in/UPDATING their data.
 
-And it has a READ route that reads all user's data and converts it to json format for reading by a (separate, not
+And it has a READ route (returns json format) that reads all user's data and converts it to json format for reading by a (separate, not
 included in this code base) react native app.
 
 Of course, you may not want this particular functionality and if you

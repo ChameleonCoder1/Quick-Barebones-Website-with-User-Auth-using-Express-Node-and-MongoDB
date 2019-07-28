@@ -20,7 +20,7 @@ var Company                 = require("./models/company.js");
 //By default, this will get the index.js file in ./middleware/
 var middleware              = require("./middleware");
 
-mongoose.connect("mongodb://localhost:27017/mooch_api", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/quick_starter_code_api", { useNewUrlParser: true });
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);

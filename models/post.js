@@ -6,7 +6,7 @@ var postSchema  =   new mongoose.Schema({
     company_name: String,
     location: String,
     thumbnail_image: String,
-    url: String
+    url: String,
     company: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Company"

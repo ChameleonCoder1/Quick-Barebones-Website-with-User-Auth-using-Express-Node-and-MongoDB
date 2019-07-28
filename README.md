@@ -36,11 +36,12 @@ and MongoDB installed (https://www.mongodb.com/download-center/community).
 Installing MongoDB is optional here and there is hard-coded data in
 server.js that is commented out and can be uncommented in place of a database.
 
-Then, simply go clone this full repository to your local machine, navigate to the
+Next, simply go clone this full repository to your local machine, navigate to the
 folder in your command line and run:
+
 npm install
 
-This will install express and all other node dependencies listed in package.json.
+The command "npm install" will install express and all other node dependencies listed in package.json.
 
 
 I've included explanatory comments before most chunks of code.

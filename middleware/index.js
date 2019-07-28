@@ -1,10 +1,10 @@
 var Post     = require("../models/post.js");
-var User     = require("../models/user.js");
+var User     = require("../models/company.js");
 
 // all the middleware goes here
 var middlewareObj={};
 
-middlewareObj.checkUserOwnership = function(req, res, next) {
+middlewareObj.checkCompanyOwnership = function(req, res, next) {
     if(req.isAuthenticated()){
         Post.findById( req.params.id , function(err, foundthepost){
             if(err){
@@ -20,7 +20,7 @@ middlewareObj.checkUserOwnership = function(req, res, next) {
                 //If the upper condition is true it will break out of the middleware
 
                 // does user own the post?
-                if(foundthepost.user.equals(req.user._id)) {
+                if(foundthepost.company.equals(req.user._id)) {
                     next();
                 } else {
                     req.flash("error", "You don't have permission to do that.");

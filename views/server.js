@@ -197,9 +197,8 @@ app.get('/api/read', (req,res) => {
     app.get("/add/company/new", function(req,res){
         res.render("new.ejs");
     });
-
     app.get("/show", function(req,res){
-        res.render("new.ejs") ;
+        res.render("new.ejs");
     });
 
 //INDEX Route: Show ALL Company's post data on a webpage

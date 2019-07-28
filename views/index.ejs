@@ -1,6 +1,20 @@
 <!-- NOTE: This code does not get used by any routes but is here for reference if you are interested
 in making a page to show data from the database on the website instead of showing data on an external
-application (like a mobile app) via an API call from that external application. The route for this is in server.js
+application (like a mobile app) via an API call from that external application. The route for this in server.js
+would be:
+//INDEX Route: Show ALL Company's post data on a webpage
+app.get("/show", function(req,res){
+    Post.find({}, function(err,allposts){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("index.ejs", {allposts:allposts}) ;
+        }
+    });
+});
+
+and you can put the following links in header.ejs to link to this route:
+<a href="/show" class="item">Show Posts</a>
  -->
 
 <% include partials/header.ejs %>

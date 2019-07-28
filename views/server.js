@@ -194,30 +194,6 @@ app.get('/api/read', (req,res) => {
 
 
 
-    app.get("/add/company/new", function(req,res){
-        res.render("new.ejs");
-    });
-    app.get("/show", function(req,res){
-        res.render("new.ejs");
-    });
-
-//INDEX Route: Show ALL Company's post data on a webpage
-//app.get("/show", function(req,res){
-//    Post.find({}, function(err,allposts){
-//        if(err){
-//            console.log(err);
-//        } else {
-//            res.render("new.ejs") ;
-//        }
-//    });
-//});
-
-//res.render("index.ejs", {allposts:allposts}) ;
-
-//        res.render("new.ejs");
-
-
-
 // UPDATE Routes (Used by a web route that is only known internally)
 
     //Edit route:

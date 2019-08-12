@@ -39,9 +39,16 @@ server.js that is commented out and can be uncommented in place of a database.
 Next, simply go clone this full repository to your local machine, navigate to the
 folder in your command line and run:
 
-npm install
+*npm install
 
 The command “npm install” will install Express (web development framework) and all other node dependencies listed in package.json. Npm is the Node Package Manager, which handles installation of node packages.
+
+Lastly, you need to start the web server. If you are using the MongoDB data server as well, you'll need to start that database server before the web server. To start the MongoDB database server, head to this documentation and follow the instructions for your particular operating system. To start the web server, navigate on the command line to the project directory folder which stores the server.js code and run:
+
+*node server.js
+
+
+That's it! Your server is running on http://localhost:5000, so head to that route in a web browser of your choice and check it out!
 
 I've included explanatory comments before most chunks of code.
 

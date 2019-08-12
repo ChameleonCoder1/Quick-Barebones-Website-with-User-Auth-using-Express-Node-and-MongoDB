@@ -43,7 +43,7 @@ folder in your command line and run:
 
 The command “npm install” will install Express (web development framework) and all other node dependencies listed in package.json. Npm is the Node Package Manager, which handles installation of node packages.
 
-Lastly, you need to start the web server. If you are using the MongoDB data server as well, you'll need to start that database server before the web server. To start the MongoDB database server, head to this documentation and follow the instructions for your particular operating system. To start the web server, navigate on the command line to the project directory folder which stores the server.js code and run:
+Lastly, you need to start the web server. If you are using the MongoDB data server as well, you'll need to start that database server before the web server. To start the MongoDB database server, head to this documentation (https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-os-x/) and follow the instructions for your particular operating system. To start the web server, navigate on the command line to the project directory folder which stores the server.js code and run:
 
 *node server.js*
 

@@ -1,7 +1,7 @@
 # Quick-Starter-Code-for-Website-with-User-Auth-and-CRUD-API-using-Express-Node-and-MongoDB
 
 
-This is code that I use to get started on web development projects.
+This is code that you may use (without restrictions) to get started on web development projects.
 
 With this code, you will have a functioning web server with open routes to create/read/update/delete users
 as well as functioning user authentication and error/success middleware delivered through flash. The original

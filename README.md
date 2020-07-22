@@ -8,11 +8,11 @@ as well as functioning user authentication and error/success middleware delivere
 purpose for this code (and the way it is currently set up) was to have various ways to access to the database (via website or react native application):
 
     - companies can UPDATE their data (via website)
-    - only I can CREATE/DELETE a companies data as needed (via a "secret" route on website)
+    - only you can CREATE/DELETE a companies data as needed (via a "secret" route on website)
     - end users can READ data (via API call which returns JSON data)
 
 As such, the website itself has a "secret" route (a route not linked to on any of the website's other
-webpages) for me to CREATE/DELETE companies. Note: If this is not desired, you
+webpages) for you to CREATE/DELETE companies. Note: If this is not desired, you
 can easily link to the create route (get request to /add/company/new) on any webpage.
 
 It has "non-secret" routes for company log-in/UPDATING their data.
@@ -24,7 +24,7 @@ Of course, you may not want this particular functionality and if you
 have trouble tailoring it to your project or any other specific questions, feel free to contact Nick at gameheel19@gmail.com.
 
 As for database schemas, there are two: Company and Post. The Company schema has username, password, and
-a 1-to-1 object reference to an associate post for that company. The Post schema has the company's city,
+a 1-to-1 object reference to an associated post for that company. The Post schema has the company's city,
 location, thumbnail image, and url, and the 1-to-1 object reference to the associated company for that post.
 
 
